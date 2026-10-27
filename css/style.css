@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    color: #18324b;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#mainheader {
+    background: white;
+    border-bottom: 1px solid white;
+}
+
+.site-header {
+    min-height: 76px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    width: auto;
+    max-width: 160px;
+    height: 75px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+}
+
+.main-nav a {
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #0f0a70;
+}
+
+.search-form {
+    width: 220px;
+    display: flex;
+    border: 1px solid #cfdae4;
+}
+
+.search-form input {
+    width: 100%;
+    min-width: 0;
+    padding: 9px 10px;
+    border: 0;
+    outline-color: #0f0a70;
+    font-size: 13px;
+}
+
+.search-form button {
+    width: 38px;
+    flex: 0 0 38px;
+    border: 0;
+    background: #eaf3fb;
+    color: #123a63;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.cart-link {
+    color: #123a63;
+    font-size: 14px;
+}
+
+.cart-count {
+    min-width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    padding: 0 5px;
+    display: inline-block;
+    border-radius: 10px;
+    background: #eaf3fb;
+    text-align: center;
+    line-height: 20px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        flex-wrap: wrap;
+        gap: 10px 15px;
+        padding: 12px 5%;
+    }
+
+    .brand {
+        margin-right: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+        border: 0;
+        background: transparent;
+        color: #123a63;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .cart-link {
+        order: 2;
+    }
+
+    .main-nav {
+        display: none;
+        order: 4;
+        width: 100%;
+        margin: 0;
+        padding: 5px 0;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-nav.is-open {
+        display: flex;
+    }
+
+    .main-nav a {
+        padding: 10px 0;
+        border-top: 1px solid #e1e8ef;
+    }
+
+    .search-form {
+        order: 5;
+        width: 100%;
+    }
+}
