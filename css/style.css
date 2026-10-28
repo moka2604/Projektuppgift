@@ -15,6 +15,12 @@ a {
     border-bottom: 1px solid white;
 }
 
+.container{
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
 .site-header {
     min-height: 76px;
     padding: 14px;
@@ -106,6 +112,68 @@ a {
     overflow: hidden;
 }
 
+.hero {
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #123a63;
+    color: white;
+}
+
+.hero > img,
+.hero-shade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero > img {
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+.hero-shade {
+    background: linear-gradient(90deg, #0b2748e8 0%, #0b2748b5 45%, #0b274830 100%);
+}
+
+.hero-content {
+    position: relative;
+    width: min(1120px, 90%);
+    padding: 55px 0;
+}
+
+.eyebrow {
+    margin: 0 0 9px;
+    color: #287db8;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    font-size: clamp(42px, 7vw, 70px);
+    line-height: 1.02;
+}
+
+.hero h1 span {
+    color: #287db8;
+}
+
+.button {
+    min-height: 42px;
+    padding: 10px 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #287db8;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
 @media (max-width: 760px) {
     .site-header {
         flex-wrap: wrap;
@@ -153,5 +221,9 @@ a {
     .search-form {
         order: 5;
         width: 100%;
+    }
+
+     .hero {
+        min-height: 370px;
     }
 }
