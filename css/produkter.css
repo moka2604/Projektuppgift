@@ -169,6 +169,100 @@ a {
     font-weight: 700;
 }
 
+.page-main {
+    min-height: 150px;
+    padding: 45px 0 70px;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+    color: dimgrey;
+}
+
+.page-heading h1 {
+    margin: 0 0 6px;
+    color: midnightblue;
+    font-size: 38px;
+}
+
+.eyebrow {
+    margin: 0 0 9px;
+    color: cornflowerblue;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.product-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid lightslategrey;
+    border-radius: 5px;
+}
+
+.product-card img {
+    height: 205px;
+    object-fit: cover;
+    background: white;
+}
+
+.product-info {
+    padding: 13px 15px;
+}
+
+.product-info h2 {
+    margin: 0 0 3px;
+    color: midnightblue;
+    font-size: 17px;
+}
+
+.product-info p {
+    margin: 0;
+    color: dimgrey;
+    font-size: 13px;
+}
+
+.add-to-cart {
+    width: 220px;
+    margin: 0 12px 12px;
+    padding: 8px;
+    border: 0;
+    background: lightsteelblue;
+    color: midnightblue;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background: lightblue;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    color: dimgrey;
+}
+
+.site-footer {
+    min-height: 64px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    background: midnightblue;
+    color: white;
+    font-size: 13px;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 760px) {
     .site-header {
         flex-wrap: wrap;
@@ -217,3 +311,16 @@ a {
         order: 5;
         width: 100%;
     }
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+
+    .page-main {
+        padding-top: 32px;
+    }
+}

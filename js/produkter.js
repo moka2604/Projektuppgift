@@ -10,7 +10,9 @@ if (menuToggle && mainNav) {
   });
 }
 
+const searchInput = document.querySelector("#site-search");
 const productCards = [...document.querySelectorAll(".product-card")];
+const noResults = document.querySelector(".no-results");
 const cartCount = document.querySelector(".cart-count");
 const cartItemsList = document.querySelector(".cart-items");
 const cartEmpty = document.querySelector(".cart-empty");
@@ -31,7 +33,7 @@ const saveCart = () => {
 
 const renderCart = () => {
   cartItemsList.replaceChildren();
-  
+
   let total = 0;
   let hasUnknownPrice = false;
   
@@ -111,3 +113,24 @@ if (window.location.hash === "#varukorg") {
 }
 
 renderCart();
+
+if (searchInput && productCards.length) {
+  const query = new URLSearchParams(window.location.search).get("q") || "";
+  searchInput.value = query;
+
+  const filterProducts = () => {
+    const value = searchInput.value.trim().toLocaleLowerCase("sv");
+    let visibleCount = 0;
+
+    productCards.forEach((card) => {
+      const matches = card.dataset.name.toLocaleLowerCase("sv").includes(value);
+      card.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    noResults.hidden = visibleCount > 0;
+  };
+
+  searchInput.addEventListener("input", filterProducts);
+  filterProducts();
+}
