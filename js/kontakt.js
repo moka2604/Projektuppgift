@@ -17,3 +17,18 @@ if (cartCount) {
     cart.reduce((sum, item) => sum + item.quantity, 0)
   );
 }
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (formMessage) {
+      formMessage.textContent = "Tack! Ditt meddelande har skickats.";
+    }
+
+    contactForm.reset();
+    contactForm.querySelectorAll("input, textarea").forEach((field) => {
+      field.value = "";
+    });
+  });
+}
