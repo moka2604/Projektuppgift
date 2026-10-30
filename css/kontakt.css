@@ -193,3 +193,73 @@ a {
     color: dimgrey;
     font-size: 12px;
 }
+
+.site-footer {
+    min-height: 64px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    background: midnightblue;
+    color: white;
+    font-size: 13px;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        flex-wrap: wrap;
+        gap: 10px 15px;
+        padding: 12px 5%;
+    }
+
+    .brand {
+        margin-right: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+        border: 0;
+        background: transparent;
+        color: darkblue;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .cart-link {
+        order: 2;
+    }
+
+    .main-nav {
+        display: none;
+        order: 4;
+        width: 100%;
+        margin: 0;
+        padding: 5px 0;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-nav.is-open {
+        display: flex;
+    }
+
+    .main-nav a {
+        padding: 10px 0;
+        border-top: 1px solid white;
+    }
+
+    .search-form {
+        order: 5;
+        width: 100%;
+    }
+
+    .page-main {
+        padding-top: 32px;
+    }
+}
