@@ -10,7 +10,21 @@
 </head>
 
 <body>
-    
+    <header id="mainheader" class="site-header">
+    <a class="brand" href="index.html"><img class="brand-logo" src="images/logo.avif" alt="Racebutiken logotyp"></a>
+    <button class="menu-toggle" type="button">&#9776;</button>
+    <nav class="main-nav">
+      <a href="index.html">Startsida</a>
+      <a href="produkter.html">Produkter</a>
+      <a class="active" href="kontakt.html">Kontakta oss</a>
+    </nav>
+    <a class="cart-link" href="produkter.html#varukorg">Varukorg <span class="cart-count">0</span></a>
+    <form class="search-form" role="search" action="produkter.html">
+      <label class="sr-only" for="site-search">Sök efter produkter</label>
+      <input id="site-search" name="q" type="search" placeholder="Sök efter produkter...">
+      <button type="submit">&#8981;</button>
+    </form>
+  </header>
 </body>
 
 </html>
