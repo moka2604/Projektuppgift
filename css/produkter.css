@@ -208,7 +208,7 @@ a {
 .product-card img {
     height: 205px;
     object-fit: cover;
-    background: white;
+    width: 85%;
 }
 
 .product-info {
