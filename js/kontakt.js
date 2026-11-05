@@ -1,5 +1,8 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mainNav = document.querySelector(".main-nav");
+const contactForm = document.querySelector(".contact-form");
+const formMessage = document.querySelector(".form-message");
+const cartCount = document.querySelector(".cart-count");
 
 if (menuToggle && mainNav) {
   menuToggle.addEventListener("click", () => {
