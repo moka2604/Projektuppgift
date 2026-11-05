@@ -13,7 +13,6 @@ if (menuToggle && mainNav) {
   });
 }
 
-const cartCount = document.querySelector(".cart-count");
 if (cartCount) {
   const cart = JSON.parse(localStorage.getItem("racebutiken-cart") || "[]");
   cartCount.textContent = String(
